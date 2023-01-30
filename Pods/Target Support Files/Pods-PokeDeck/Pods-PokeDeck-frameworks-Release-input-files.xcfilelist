@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-PokeDeck/Pods-PokeDeck-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AutoEquatable/AutoEquatable.framework
+${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageSVGNativeCoder/SDWebImageSVGNativeCoder.framework
+${BUILT_PRODUCTS_DIR}/svgnative/svgnative.framework

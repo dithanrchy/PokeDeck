@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ChainEntity" representedClassName="ChainEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="evolutionDetails" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EvolutionDetailEntity"/>
+        <relationship name="evolvesTo" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ChainEntity"/>
+        <relationship name="species" maxCount="1" deletionRule="Nullify" destinationEntity="SpeciesEntity"/>
+    </entity>
+    <entity name="DetailedStatEntity" representedClassName="DetailedStatEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="url" attributeType="String"/>
+    </entity>
+    <entity name="DreamWorldEntity" representedClassName="DreamWorldEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="frontDefault" attributeType="String"/>
+    </entity>
+    <entity name="EvolutionChainEntity" representedClassName="EvolutionChainEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="url" attributeType="String"/>
+    </entity>
+    <entity name="EvolutionDetailEntity" representedClassName="EvolutionDetailEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="minLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="EvolutionEntity" representedClassName="EvolutionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="chain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChainEntity"/>
+    </entity>
+    <entity name="OtherEntity" representedClassName="OtherEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="dreamWorld" maxCount="1" deletionRule="Nullify" destinationEntity="DreamWorldEntity"/>
+    </entity>
+    <entity name="PokemonEntity" representedClassName="PokemonEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="height" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="weight" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="species" maxCount="1" deletionRule="Nullify" destinationEntity="SpeciesEntity"/>
+        <relationship name="sprites" maxCount="1" deletionRule="Nullify" destinationEntity="SpritesEntity"/>
+        <relationship name="stats" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="StatEntity" inverseName="pokemon" inverseEntity="StatEntity"/>
+    </entity>
+    <entity name="PokemonSpeciesEntity" representedClassName="PokemonSpeciesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="evolutionChain" maxCount="1" deletionRule="Nullify" destinationEntity="EvolutionChainEntity"/>
+    </entity>
+    <entity name="SpeciesEntity" representedClassName="SpeciesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="url" attributeType="String"/>
+    </entity>
+    <entity name="SpritesEntity" representedClassName="SpritesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="frontDefault" attributeType="String"/>
+        <relationship name="other" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OtherEntity"/>
+    </entity>
+    <entity name="StatEntity" representedClassName="StatEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="baseStat" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="effort" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="pokemon" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PokemonEntity" inverseName="stats" inverseEntity="PokemonEntity"/>
+        <relationship name="stat" maxCount="1" deletionRule="Nullify" destinationEntity="DetailedStatEntity"/>
+    </entity>
+</model>

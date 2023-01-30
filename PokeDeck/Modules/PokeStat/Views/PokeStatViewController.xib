@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokeStatViewController" customModule="PokeDeck" customModuleProvider="target">
+            <connections>
+                <outlet property="attackProgressBar" destination="dmS-FM-4hm" id="Cwb-Kc-f8p"/>
+                <outlet property="attackValueLabel" destination="4bI-lb-Pb3" id="eVm-bL-Gg9"/>
+                <outlet property="defenseProgressBar" destination="YJX-7o-T6H" id="trO-0c-7KI"/>
+                <outlet property="defenseValueLabel" destination="MJo-r5-Mg5" id="kpa-GZ-w28"/>
+                <outlet property="hpProgressBar" destination="8BQ-23-zzs" id="5iM-kS-SzP"/>
+                <outlet property="hpValueLabel" destination="Spn-xL-0c4" id="hxG-fm-vJ6"/>
+                <outlet property="spAttackProgressBar" destination="Eza-Ed-V7c" id="QKk-kA-N4g"/>
+                <outlet property="spAttackValueLabel" destination="eG4-VI-548" id="wNl-e7-WM7"/>
+                <outlet property="spDefenseProgressBar" destination="aNd-HB-5Nh" id="haC-z7-rtW"/>
+                <outlet property="spDefenseValueLabel" destination="c19-79-5RV" id="a0k-x5-oKL"/>
+                <outlet property="speedProgressBar" destination="ubb-QE-nev" id="8qg-5b-NEk"/>
+                <outlet property="speedValueLabel" destination="Opm-ee-DJa" id="Rvv-cs-CLW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="rhR-Tm-LKX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-OS-JSy">
+                    <rect key="frame" x="16" y="75" width="21.666666666666671" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spn-xL-0c4">
+                    <rect key="frame" x="115.99999999999999" y="75" width="29.333333333333329" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BQ-23-zzs" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                    <rect key="frame" x="150.33333333333337" y="75" width="226.66666666666663" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="grn-ME-2j2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                            <color key="value" systemColor="systemGray4Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYJ-jB-ktl">
+                    <rect key="frame" x="15.999999999999996" y="109.33333333333333" width="46.666666666666657" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bI-lb-Pb3">
+                    <rect key="frame" x="116.00000000000001" y="109.33333333333333" width="26.666666666666671" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-FM-4hm" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                    <rect key="frame" x="150.33333333333337" y="109.33333333333333" width="226.66666666666663" height="20.999999999999986"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="gxj-CA-Byo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                            <color key="value" systemColor="systemGray4Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-oj-Zm9">
+                    <rect key="frame" x="16.000000000000004" y="143.66666666666666" width="60.333333333333343" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="002" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJo-r5-Mg5">
+                    <rect key="frame" x="116" y="143.66666666666666" width="29" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJX-7o-T6H" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                    <rect key="frame" x="150.33333333333337" y="143.66666666666666" width="226.66666666666663" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="tD4-QM-IRZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                            <color key="value" systemColor="systemGray4Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sp. Attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4V-5F-fFv">
+                    <rect key="frame" x="16" y="178" width="74.666666666666671" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="003" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG4-VI-548">
+                    <rect key="frame" x="115.99999999999999" y="178" width="29.333333333333329" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eza-Ed-V7c" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                    <rect key="frame" x="150.33333333333337" y="178" width="226.66666666666663" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="9H6-2b-pef"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                            <color key="value" systemColor="systemGray4Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sp. Defense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8K-an-gFW">
+                    <rect key="frame" x="16" y="212.33333333333334" width="88" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="004" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c19-79-5RV">
+                    <rect key="frame" x="116.00000000000001" y="212.33333333333334" width="29.666666666666671" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNd-HB-5Nh" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                    <rect key="frame" x="150.33333333333337" y="212.33333333333334" width="226.66666666666663" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="IIJ-HB-dfh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                            <color key="value" systemColor="systemGray4Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-Lr-ZQh">
+                    <rect key="frame" x="15.999999999999996" y="246.66666666666666" width="46.666666666666657" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="005" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opm-ee-DJa">
+                    <rect key="frame" x="115.99999999999999" y="246.66666666666666" width="29.333333333333329" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubb-QE-nev" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                    <rect key="frame" x="150.33333333333337" y="246.66666666666663" width="226.66666666666663" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Nsd-XS-Tad"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                            <color key="value" systemColor="systemGray4Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="c19-79-5RV" firstAttribute="top" secondItem="k8K-an-gFW" secondAttribute="top" id="29H-dB-8ib"/>
+                <constraint firstItem="Eza-Ed-V7c" firstAttribute="leading" secondItem="Spn-xL-0c4" secondAttribute="trailing" constant="5" id="3Ez-1y-jSl"/>
+                <constraint firstItem="eG4-VI-548" firstAttribute="top" secondItem="l4V-5F-fFv" secondAttribute="top" id="47c-nY-7Gl"/>
+                <constraint firstItem="MJo-r5-Mg5" firstAttribute="top" secondItem="zS7-oj-Zm9" secondAttribute="top" id="4d5-L7-HkS"/>
+                <constraint firstItem="l4V-5F-fFv" firstAttribute="top" secondItem="zS7-oj-Zm9" secondAttribute="bottom" constant="15" id="8mp-dj-Ofb"/>
+                <constraint firstItem="dmS-FM-4hm" firstAttribute="top" secondItem="DYJ-jB-ktl" secondAttribute="top" id="BNg-A1-d1t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aNd-HB-5Nh" secondAttribute="trailing" constant="16" id="DGH-Fb-Qgn"/>
+                <constraint firstItem="aNd-HB-5Nh" firstAttribute="leading" secondItem="Spn-xL-0c4" secondAttribute="trailing" constant="5" id="Gnq-ls-xrR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ubb-QE-nev" secondAttribute="trailing" constant="16" id="J70-dd-ljc"/>
+                <constraint firstItem="DYJ-jB-ktl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JQl-UP-FXb"/>
+                <constraint firstItem="l4V-5F-fFv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NTr-xN-zHl"/>
+                <constraint firstItem="Eza-Ed-V7c" firstAttribute="top" secondItem="l4V-5F-fFv" secondAttribute="top" id="PQO-lY-ril"/>
+                <constraint firstItem="8BQ-23-zzs" firstAttribute="top" secondItem="k6p-OS-JSy" secondAttribute="top" id="Qmx-IV-9Ub"/>
+                <constraint firstItem="rYm-Lr-ZQh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SA5-ZH-eNa"/>
+                <constraint firstItem="eG4-VI-548" firstAttribute="leading" secondItem="k8K-an-gFW" secondAttribute="trailing" constant="12" id="SLL-xa-MdJ"/>
+                <constraint firstItem="DYJ-jB-ktl" firstAttribute="top" secondItem="k6p-OS-JSy" secondAttribute="bottom" constant="15" id="WlH-Zq-CFg"/>
+                <constraint firstItem="8BQ-23-zzs" firstAttribute="leading" secondItem="Spn-xL-0c4" secondAttribute="trailing" constant="5" id="Yzt-DN-R9V"/>
+                <constraint firstItem="4bI-lb-Pb3" firstAttribute="top" secondItem="DYJ-jB-ktl" secondAttribute="top" id="aHC-bb-txL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dmS-FM-4hm" secondAttribute="trailing" constant="16" id="aQy-C6-dBt"/>
+                <constraint firstItem="YJX-7o-T6H" firstAttribute="leading" secondItem="Spn-xL-0c4" secondAttribute="trailing" constant="5" id="aSa-1T-cE1"/>
+                <constraint firstItem="k6p-OS-JSy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="cuI-L5-64R"/>
+                <constraint firstItem="c19-79-5RV" firstAttribute="leading" secondItem="k8K-an-gFW" secondAttribute="trailing" constant="12" id="ecw-uR-5GT"/>
+                <constraint firstItem="dmS-FM-4hm" firstAttribute="leading" secondItem="Spn-xL-0c4" secondAttribute="trailing" constant="5" id="f0A-rG-i1H"/>
+                <constraint firstItem="k8K-an-gFW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fS4-Dw-mM1"/>
+                <constraint firstItem="aNd-HB-5Nh" firstAttribute="top" secondItem="k8K-an-gFW" secondAttribute="top" id="fad-Tu-onO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YJX-7o-T6H" secondAttribute="trailing" constant="16" id="hlu-yD-aZc"/>
+                <constraint firstItem="zS7-oj-Zm9" firstAttribute="top" secondItem="DYJ-jB-ktl" secondAttribute="bottom" constant="15" id="io9-RX-2Ls"/>
+                <constraint firstItem="Spn-xL-0c4" firstAttribute="top" secondItem="k6p-OS-JSy" secondAttribute="top" id="jNF-eX-Cno"/>
+                <constraint firstItem="Opm-ee-DJa" firstAttribute="top" secondItem="rYm-Lr-ZQh" secondAttribute="top" id="lZJ-2I-D8n"/>
+                <constraint firstItem="ubb-QE-nev" firstAttribute="leading" secondItem="Spn-xL-0c4" secondAttribute="trailing" constant="5" id="lb2-bc-x45"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8BQ-23-zzs" secondAttribute="trailing" constant="16" id="nJB-EH-2eK"/>
+                <constraint firstItem="zS7-oj-Zm9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pPP-AQ-kly"/>
+                <constraint firstItem="YJX-7o-T6H" firstAttribute="top" secondItem="zS7-oj-Zm9" secondAttribute="top" id="qYG-cc-Du7"/>
+                <constraint firstItem="ubb-QE-nev" firstAttribute="top" secondItem="rYm-Lr-ZQh" secondAttribute="top" id="rZj-5j-0rn"/>
+                <constraint firstItem="MJo-r5-Mg5" firstAttribute="leading" secondItem="k8K-an-gFW" secondAttribute="trailing" constant="12" id="rdS-1C-8NG"/>
+                <constraint firstItem="k8K-an-gFW" firstAttribute="top" secondItem="l4V-5F-fFv" secondAttribute="bottom" constant="15" id="vPM-8Q-7cm"/>
+                <constraint firstItem="Opm-ee-DJa" firstAttribute="leading" secondItem="k8K-an-gFW" secondAttribute="trailing" constant="12" id="wQA-mz-W29"/>
+                <constraint firstItem="Spn-xL-0c4" firstAttribute="leading" secondItem="k8K-an-gFW" secondAttribute="trailing" constant="12" id="wRk-EQ-WHi"/>
+                <constraint firstItem="4bI-lb-Pb3" firstAttribute="leading" secondItem="k8K-an-gFW" secondAttribute="trailing" constant="12" id="wgU-pR-v59"/>
+                <constraint firstItem="rYm-Lr-ZQh" firstAttribute="top" secondItem="k8K-an-gFW" secondAttribute="bottom" constant="15" id="xCQ-pb-t5O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eza-Ed-V7c" secondAttribute="trailing" constant="16" id="xf5-fM-ADb"/>
+                <constraint firstItem="k6p-OS-JSy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ynN-dB-F5v"/>
+            </constraints>
+            <point key="canvasLocation" x="49.618320610687022" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

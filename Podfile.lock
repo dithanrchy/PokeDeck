@@ -1,0 +1,58 @@
+PODS:
+  - Alamofire (5.6.4)
+  - AutoEquatable (2.4)
+  - LinearProgressBar (1.0.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxTest (6.5.0):
+    - RxSwift (= 6.5.0)
+  - SDWebImage (5.15.0):
+    - SDWebImage/Core (= 5.15.0)
+  - SDWebImage/Core (5.15.0)
+  - SDWebImageSVGNativeCoder (0.1.1):
+    - SDWebImage (~> 5.10)
+    - svgnative (>= 0.1.0-beta)
+  - svgnative (0.1.0-beta)
+
+DEPENDENCIES:
+  - Alamofire
+  - AutoEquatable
+  - LinearProgressBar
+  - RxCocoa
+  - RxSwift
+  - RxTest
+  - SDWebImage
+  - SDWebImageSVGNativeCoder
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AutoEquatable
+    - LinearProgressBar
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - SDWebImage
+    - SDWebImageSVGNativeCoder
+    - svgnative
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  AutoEquatable: b92d573a0e0c03fcf23e23c8268e824e55cf8bc4
+  LinearProgressBar: 619d6f286b608e501f39406557f60cdab3faf910
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
+  SDWebImage: 9bec4c5cdd9579e1f57104735ee0c37df274d593
+  SDWebImageSVGNativeCoder: dae205bb67b523328e5b87d6ff22d6c640e594c0
+  svgnative: 50a6b71a4e4c161f0352d888afe21e94affd3b42
+
+PODFILE CHECKSUM: dd5b777070e0bcfc64bcdf24bea9109b81ff5a21
+
+COCOAPODS: 1.11.3
